@@ -64,7 +64,8 @@ namespace SDRSharp.HackRF
                 var strptr = hackrf_board_id_name_native(index);
                 return Marshal.PtrToStringAnsi(strptr);
             }
-            catch (EntryPointNotFoundException e)
+            //catch (EntryPointNotFoundException e)
+            catch(Exception e)
             {
                 Console.WriteLine("{0}:\n   {1}", e.GetType().Name,  e.Message);
                 return "HackRF";
